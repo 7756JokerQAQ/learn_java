@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  var arr=new Array(1,2,3);
+  //alert(arr)
+  //方式二
+  var arr2=[1,2,3];
+  //alert(arr2);
+  //访问
+  arr2[0]=10;
+ // alert(arr2);
+  //特点 javascript数组相当于java中的集合，变长变类型
+  var arr3=[1,2,3];
+  arr3[10]=10;
+ // alert(arr3[9]);
+  //便类型
+  arr3[5]="hello";
+ // alert(arr3);
+  //属性length代表数组中元素的个数
+/*  var arr4=[1,2,3];
+  for (let i = 0; i < arr4.length; i++) {
+    alert(arr4[i])
+  }*/
+  //方法
+  //push添加方法
+  //splice删除元素
+  var arr5=[1,2,3];
+  arr5.push(10);
+ // alert(arr5);
+  arr5.splice(0,1);
+  alert(arr5);
+  var str1=new String("abc");
+
+  str1.length;
+  //trim()去除字符串前后两端的空白字符
+
+</script>
+
+</body>
+</html>

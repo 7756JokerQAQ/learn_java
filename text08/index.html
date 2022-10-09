@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:https="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <title>古诗词展示</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<div class="header">
+  <img src="image/1111.png">
+</div>
+
+
+<body>
+<div class="content">
+  <h1 class="arr" align="center">Story Word Presentation</h1>
+</div>
+
+<div class="row">
+  <div class="centercolumn">
+    <div class="card">
+
+      <h2 id="biaoti">短歌行</h2><br />
+      <hr />
+      <h4 id="qita">东汉末年（曹操）</h4>
+      <p style="text-indent:2em" align="center">对 酒 当 歌 ，人 生 几 何 ！</p>
+      <p style="text-indent:2em" align="center">譬 如 朝 露 ，去 日 苦 多 。</p>
+      <p style="text-indent:2em" align="center">慨 当 以 慷 ，忧 思 难 忘 。</p>
+      <p style="text-indent:2em" align="center">何 以 解 忧 ？唯 有 杜 康 。</p>
+      <p style="text-indent:2em" align="center">青 青 子 衿 ，悠 悠 我 心 。</p>
+      <p style="text-indent:2em" align="center">但 为 君 故 ，沉 吟 至 今 。</p>
+      <p style="text-indent:2em" align="center">呦 呦 鹿 鸣 ，食 野 之 苹 。</p>
+      <p style="text-indent:2em" align="center">我 有 嘉 宾 ，鼓 瑟 吹 笙 。</p>
+      <p style="text-indent:2em" align="center">明 明 如 月 ，何 时 可 掇 ？</p>
+      <p style="text-indent:2em" align="center">忧 从 中 来 ，不 可 断 绝 。</p>
+      <p style="text-indent:2em" align="center">越 陌 度 阡 ，枉 用 相 存 。</p>
+      <p style="text-indent:2em" align="center">契 阔 谈 讌 ，心 念 旧 恩 。</p>
+      <p style="text-indent:2em" align="center">月 明 星 稀 ，乌 鹊 南 飞 。</p>
+      <p style="text-indent:2em" align="center">绕 树 三 匝 ，何 枝 可 依 ？</p>
+      <p style="text-indent:2em" align="center">山 不 厌 高 ，海 不 厌 深 。</p>
+      <p style="text-indent:2em" align="center">周 公 吐 哺 ，天 下 归 心 。</p>
+    </div>
+    <br /><br />
+    <div class="card">
+      <h2 id="biaoti">注释</h2><br />
+      <hr />
+      <p style="text-indent:2em" align="center">面对着美酒高声放歌，人生短促日月如梭。</p>
+      <p style="text-indent:2em" align="center">好比晨露转瞬即逝，失去的时日实在太多！</p>
+      <p style="text-indent:2em" align="center">席上歌声激昂慷慨，忧郁长久填满心窝。</p>
+      <p style="text-indent:2em" align="center">穿青色衣领的学子，你们令我朝夕思慕。</p>
+      <p style="text-indent:2em" align="center">好比晨露转瞬即逝，失去的时日实在太多！</p>
+      <p style="text-indent:2em" align="center">席上歌声激昂慷慨，忧郁长久填满心窝。</p>
+      <p style="text-indent:2em" align="center">只是因为您的缘故，让我沉痛吟诵至今。</p>
+      <p style="text-indent:2em" align="center">一旦四方贤才光临舍下，我将奏瑟吹笙宴请嘉宾。</p>
+      <p style="text-indent:2em" align="center"> 当空悬挂的皓月哟，什么时候才可以拾到；</p>
+      <p style="text-indent:2em" align="center">我久蓄于怀的忧愤哟，突然喷涌而出汇成长河。</p>
+      <p style="text-indent:2em" align="center">远方宾客踏着田间小路，一个个屈驾前来探望我。</p>
+      <p style="text-indent:2em" align="center">久别重逢欢宴畅谈，争着将往日的情谊诉说。</p>
+      <p style="text-indent:2em" align="center">月光明亮星光稀疏，一群寻巢乌鹊向南飞去。</p>
+      <p style="text-indent:2em" align="center">绕树飞了三周却没敛翅，哪里才有它们栖身之所？</p>
+      <p style="text-indent:2em" align="center">高山不辞土石才见巍峨，大海不弃涓流才见壮阔。</p>
+      <p style="text-indent:2em" align="center">我愿如周公一般礼贤下士，愿天下的英杰真心归顺与我。</p>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+  //鼠标点击出现爱心特效
+  (function (window, document, undefined) {
+    var hearts = [];
+    window.requestAnimationFrame = (function () {
+      return window.requestAnimationFrame ||
+              window.webkitRequestAnimationFrame ||
+              window.mozRequestAnimationFrame ||
+              window.oRequestAnimationFrame ||
+              window.msRequestAnimationFrame ||
+              function (callback) {
+                setTimeout(callback, 1000 / 60);
+              }
+    })();
+    init();
+    function init() {
+      css(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}");
+      attachEvent();
+      gameloop();
+    }
+    function gameloop() {
+      for (var i = 0; i < hearts.length; i++) {
+        if (hearts[i].alpha <= 0) {
+          document.body.removeChild(hearts[i].el);
+          hearts.splice(i, 1);
+          continue;
+        }
+        hearts[i].y--;
+        hearts[i].scale += 0.004;
+        hearts[i].alpha -= 0.013;
+        hearts[i].el.style.cssText = "left:" + hearts[i].x + "px;top:" + hearts[i].y + "px;opacity:" + hearts[i].alpha + ";transform:scale(" + hearts[i].scale + "," + hearts[i].scale + ") rotate(45deg);background:" + hearts[i].color;
+      }
+      requestAnimationFrame(gameloop);
+    }
+    function attachEvent() {
+      var old = typeof window.onclick === "function" && window.onclick;
+      window.onclick = function (event) {
+        old && old();
+        createHeart(event);
+      }
+    }
+    function createHeart(event) {
+      var d = document.createElement("div");
+      d.className = "heart";
+      hearts.push({
+        el: d,
+        x: event.clientX - 5,
+        y: event.clientY - 5,
+        scale: 1,
+        alpha: 1,
+        color: randomColor()
+      });
+      document.body.appendChild(d);
+    }
+    function css(css) {
+      var style = document.createElement("style");
+      style.type = "text/css";
+      try {
+        style.appendChild(document.createTextNode(css));
+      } catch (ex) {
+        style.styleSheet.cssText = css;
+      }
+      document.getElementsByTagName('head')[0].appendChild(style);
+    }
+    function randomColor() {
+      return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
+    }
+  })(window, document);
+</script>
+</body>
+</html>

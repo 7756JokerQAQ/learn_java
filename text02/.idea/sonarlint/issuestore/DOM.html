@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>下·
+<body>
+<img id="light" src="../imgs/off.gif"> <br>
+<div class="cls">传智教育</div> <br>
+<div class="cls">黑马程序员</div> <br>
+<input type="checkbox" name="hobby"> 电影
+<input type="checkbox" name="hobby"> 旅游
+<input type="checkbox" name="hobby"> 游戏
+<br>
+<script>
+  //在此处书写js代码
+  <input type="button" onclick='on()'>
+      function on(){
+      alert("我被点了");
+  }
+var elementById = document.getElementById("light");
+//alert(elementById);
+elementById.src="../imgs/on.gif"
+
+var elementsByTagName = document.getElementsByTagName("div");
+//alert(elementsByTagName.length);
+
+  // for (let i = 0; i < elementsByTagName.length; i++) {
+  //   alert(elementsByTagName[i]);
+  // }
+
+
+</script>
+</body>
+</html>

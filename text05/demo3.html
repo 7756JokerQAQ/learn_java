@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>点击检测年龄</p>
+年龄：<input id="age" value="18"/>
+<p>是否到达投票年龄</p>
+<button onclick="myFunction()">点击按钮</button>
+<p id="demo"></p>
+<script>
+  function myFunction() {
+    var age,voteable;
+    age=document.getElementById("age").value;
+    voteable=(age<18)?"年龄太小":"年龄已经达到";
+    document.getElementById("demo").innerHTML=voteable;
+  }
+</script>
+</body>
+</html>

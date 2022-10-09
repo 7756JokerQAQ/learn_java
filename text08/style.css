@@ -1,0 +1,75 @@
+* {
+    margin: 0px; /*设置四周边距都为0*/
+    box-sizing: border-box; /*宽高的设置值包括border等*/
+}
+
+body {
+    /*设置背景图片*/
+    /*设置背景图不随网页滑动而改变*/
+    background: url("image/wa11.png") no-repeat fixed;
+    background-size: cover;
+    z-index: 1;
+}
+
+/*头部的图片属性*/
+.header img{
+    width: 100%;
+    filter: opacity(80%);
+}
+/*卡片内容的展示*/
+.content {
+    perspective: 400px;
+    width: 100%;
+    height: 120px;
+    position: relative;
+}
+
+/* 顶部导航条 */
+.top {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* center column */
+.leftcolumn {
+    float: left;
+    width: 10%;
+}
+
+.centercolumn {
+    margin: auto;
+    width: 80%;
+    height: 1000px;
+    padding: 10px;
+
+}
+
+.rightcolumn {
+    float: left;
+    width: 10%;
+}
+
+/* 文章卡片 */
+.card {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 50px;
+
+}
+
+#biaoti {
+    text-align: center;
+}
+
+#qita {
+    text-align: right;
+}
+
+/* 列后面清除浮动 */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+

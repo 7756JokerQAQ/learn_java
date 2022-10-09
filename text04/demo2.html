@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+  JavaScript 能够直接写入HTML输出流中:
+</p>
+<script>
+  document.write("<h1>这是一个标题</h1>");
+  document.write("<p>这是一个段落</p>");
+</script>
+<p>
+  您只能在 HTML 输出流中使用 <strong>document.write</strong>。
+  如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+</p>
+<h1>我的第一个JavaScript</h1>
+<p>
+  <button type="button" onclick="alert('欢迎！')">点我！</button>
+</p>
+<h1>我的第一段JavaScript</h1>
+<p id="demo">
+  JavaScript 能改变HtML元素的内容
+</p>
+<script>
+  function myFunction() {
+    x=document.getElementById("demo");
+    x.innerHTML="Hello JavaScript!";
+  }
+</script>
+<button type="button" onclick="myFunction()">
+  点击这里!
+</button>
+<script>
+  function changeImage() {
+    element=document.getElementById('myimage');
+    if(element.src.match("button")){
+      element.src="../image/img.jpg";
+    }else{
+        element.src="../image/img_1.jpg";
+    }
+  }
+</script>
+<img id="myimage" onclick="changeImage()"
+     src="../image/img.jpg " width="100" height="100">
+<p>
+    点击灯泡就可以开关灯;
+</p>
+<p id="demo">
+    JavaScript改变HTML的元素样式
+</p>
+<script>
+    function myFunction(){
+        x=document.getElementById("demo")
+        x.style.color="#ff0000";
+    }
+</script>
+<button type="button" onclick="myFunction()">
+    点击这里
+</button>
+</body>
+</html>

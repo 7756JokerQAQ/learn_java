@@ -1,0 +1,22 @@
+p{
+    color: red;
+}
+.f20{    /* 类样式*/
+    font-size:20px;
+}
+/*ID样式*/
+#p4{
+    background-color: pink;
+    font-size:24px;
+    font-style: italic;
+    font-weight: bolder;
+    font-family: "华文彩云";
+}
+div p{
+    color: blue;
+}
+/*组合样式*/
+div .f32{
+    font-size: 32px;
+    font-family: "黑体";
+}

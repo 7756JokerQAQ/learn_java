@@ -1,0 +1,19 @@
+
+R
+"src/com/itheima/jdbc/JDBCDemo.java,f\5\f59cc340993dc49a31561cf0c1b27b836813d594
+T
+$src/com/itheima/jdbc/JDBCDemo_6.java,6\2\622205934ffd17404963b00eff98ea1265318053
+T
+$src/com/itheima/jdbc/JDBCDemo_7.java,5\6\56e8892ae468027e0459ae75e631b0789bafd3a6
+Q
+!src/com/itheima/pojo/Account.java,9\3\93b13e7d370bf0ec4be83fe4aae0412933721bd3
+O
+src/com/itheima/pojo/Brand.java,3\a\3af9d2bc320933fcc99ab625ffd683d9ff139b98
+V
+&src/com/itheima/example/BrandTest.java,e\6\e65e456d4f778597e287ab707bbbfcb47622811a
+T
+$src/com/itheima/tesst/Helloword.java,7\f\7f724016b8671fbe66754873b675f9b684fea4b3
+S
+#src/com/itheima/jdbc/JDBCDemo3.java,6\3\63764a71dc75afa34a018c2cd435f41cb5efd195
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec

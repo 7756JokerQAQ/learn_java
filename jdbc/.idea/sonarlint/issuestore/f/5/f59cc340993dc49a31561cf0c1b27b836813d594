@@ -1,0 +1,9 @@
+
+b
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ
+^
+java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(›’Û»
+Q	java:S125	"<This block of commented-out lines of code should be removed.(†¨÷È
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ž³ð¸ûÿÿÿÿ
+2
+java:S1116"Remove this empty statement.(Üã–Ò

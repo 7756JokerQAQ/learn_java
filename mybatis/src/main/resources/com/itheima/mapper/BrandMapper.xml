@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+namespqce 名称空间
+-->
+
+
+<mapper namespace="com.itheima.mapper.BrandMapper">
+    <!--数据库的字段名和实体类的属性名称 不一样，则自动封装数据
+            1.起别名让别名和实体类的属性名一样 缺点每次查询都要定义一次别名
+             2.SQL片段  缺点:不灵活
+    -->
+    <!--id唯一标识
+    type：映射的类型支持别名
+    -->
+    <!--    id:完成逐渐字段的映射
+             column:表的列名
+             property:实体类的属性名
+             result：完成一般字段的映射
+              column:表的列名
+             property:实体类的属性名
+    -->
+    <!-- resultMap
+      1定义<resultMap>标签
+      2使用resultMap属性替换
+
+      -->
+    <resultMap id="brandResultMap" type="brand">
+        <result column="brand_name" property="brandName"/>
+        <result column="company_name" property="companyName"/>
+
+    </resultMap>
+
+
+    <select id="selectAll" resultMap="brandResultMap">
+        select *
+        from tb_brand;
+
+    </select>
+    <select id="selectById" resultMap="brandResultMap">
+        select *
+        from tb_brand
+        where id = #{id};
+    </select>
+
+    <!--       条件查询
+           <select id="selectByCondition" resultMap="brandResultMap">
+               select *
+               from tb_brand
+               where status = #{status}
+                 and company_name like #{companyName}
+                 and brand_name like #{brandName}
+
+           </select>
+
+
+           恒等式
+           where标签解决问题-->
+    <select id="selectByCondition" resultMap="brandResultMap">
+        select *
+        from tb_brand
+        <where>
+            <if test="status!=null">
+                status = #{status}
+            </if>
+            <if test="companyName!=null and companyName!=''">
+                and company_name like #{companyName}
+            </if>
+            <if test="brandName!=null and brandName!=''">
+                and brand_name like #{brandName}
+            </if>
+
+        </where>
+
+    </select>
+    <select id="selectByConditionSingle" resultMap="brandResultMap">
+        select *
+        from tb_brand
+        where
+        <choose>
+            <when test="status!=null">
+                status = #{status}
+            </when>
+            <when test="companyName!=null and companyName!=''">
+                company_name like #{companyName}
+            </when>
+
+            <when test="brandName!=null and brandName!=''">
+                brand_name like #{brandName}
+            </when>
+            <otherwise>
+                1=1
+            </otherwise>
+
+        </choose>
+
+
+    </select>
+
+    <insert id="add" useGeneratedKeys="true" keyProperty="id">
+        insert into tb_brand(brand_name, company_name, ordered, description, status)
+        values (#{brandName}, #{companyName}, #{ordered}, #{description}, #{status});
+
+    </insert>
+    <update id="update">
+        update tb_brand
+
+        <set>
+            <if test="brandName!=null and brandName !=''">
+                brand_name=#{brandName},
+            </if>
+            <if test="companyName!=null and companyName !=''">
+                company_name=#{companyName},
+            </if>
+            <if test="ordered!=null">
+                ordered=#{ordered},
+            </if>
+            <if test="description!=null and description !=''">
+                description=#{description},
+            </if>
+            <if test="status!=null">
+                status=#{status}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteById">
+        delete
+        from tb_brand
+        where id = #{id}
+
+    </delete>
+    <!--
+    默认为array
+    -->
+
+    <delete id="deleteByIds">
+        delete from tb_brand
+        where id
+        in
+        <foreach collection="array" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+        ;
+
+
+    </delete>
+
+
+</mapper>

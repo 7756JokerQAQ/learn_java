@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+  var fruits=["bababa","Orange","Apple"];
+  document.getElementById("demo").innerHTML=isArray(fruits);
+  function isArray(myArray) {
+    return myArray.constructor.toString().indexOf("Array")>-1;
+  }
+
+</script>
+</body>
+</html>
